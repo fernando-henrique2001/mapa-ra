@@ -12,7 +12,36 @@
 </head>
 
 <body>
-    <h1>Google Maps - R.A</h1>
+    <div class="header">
+        <img src="./RTHK0002_rethink_rgb_fb_26.png" alt="" id="imageLogo">
+        <h1>Google Maps - R.A</h1>
+    </div>
+
+    <div class="container">
+        <form action="" id="form" class="address-form">
+            <input onchange="setCurrentPositionMarker()" list="locations" type="text" name="origin" id="origin"
+                class="input" placeholder="Escolha um endereço de origem">
+            <datalist id="locations">
+                <option id="1" value="Localização atual"></option>
+            </datalist>
+
+            <input type="text" name="destination" id="destination" class="input"
+                placeholder="Escolha um endereço de destino">
+
+            <button class="btnSubmit" id="btnSubmit">Traçar Rotas</button>
+            <button class="btnDelete" id="btnDelete">Delete</button>
+        </form>
+
+        <div class="travelMode">
+            <div class="mode" id="driving" type="click">
+                <img src="./carro.png" alt="" class="imageMode">
+            </div>
+            <div class="mode" id="walking" type="click">
+                <img src="./walk.png" alt="" class="imageMode">
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
 
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
